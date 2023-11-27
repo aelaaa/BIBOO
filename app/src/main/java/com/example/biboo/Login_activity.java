@@ -15,8 +15,8 @@ import android.widget.Toast;
 public class Login_activity extends AppCompatActivity {
 
     EditText username, password;
-    TextView forgot, privacy, terms;
-    Button login, signup;
+    TextView forgot, privacy, terms, login;
+    Button  signup;
 
     SQLiteDatabase db;
     Cursor cursor;
