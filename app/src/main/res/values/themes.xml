@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.BIBOO" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.BIBOO" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#008981</item>
         <item name="colorPrimaryVariant">#0D201F</item>
