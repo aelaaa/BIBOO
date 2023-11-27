@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BIBOO</string>
+    <string name = "welcome">WELCOME</string>
 </resources>
