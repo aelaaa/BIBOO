@@ -115,7 +115,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="100dp"
         android:layout_marginLeft="40dp"
         android:elevation="6dp"
         android:text="LOG IN"
@@ -135,32 +135,8 @@
         android:textSize="25sp"
         android:elevation="6dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="100dp"
         android:layout_marginLeft="220dp"/>
-    <TextView
-        android:id="@+id/terms_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="110dp"
-        android:elevation="6dp"
-        android:fontFamily="@font/roboto"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:textSize="20sp"
-        android:text="Terms and Conditions"
-        android:textColor="@color/black"/>
-    <TextView
-        android:id="@+id/privacy_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:layout_marginLeft="170dp"
-        android:elevation="6dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:text="Privacy"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
 
 
 
