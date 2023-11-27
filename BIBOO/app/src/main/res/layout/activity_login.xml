@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Login"
+
+    tools:context=".Login_activity">
+
+    <TextView
+        android:id="@+id/welcome_textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="WELCOME"
+        android:textSize="40sp"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="100dp"
+        />
+    <TextView
+        android:id="@+id/login_textview"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="LOG IN"
+        android:textSize="20sp"
+        android:layout_marginVertical="100dp"
+        android:layout_marginHorizontal="226dp"
+        />
+
+    <TextView
+        android:id="@+id/login_username_textview"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="username:"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="270dp"
+        android:layout_marginHorizontal="30dp"
+        />
+    <EditText
+        android:id="@+id/login_username_edittext"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:hint="username"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:elevation="6dp"
+        android:textStyle="normal"
+        android:background="@drawable/round_shape"
+        android:layout_marginVertical="300dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/login_password_login"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="password:"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="370dp"
+        android:layout_marginHorizontal="30dp"
+        />
+
+    <EditText
+        android:id="@+id/login_password_edittext"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:elevation="6dp"
+        android:textStyle="normal"
+        android:background="@drawable/round_shape"
+        android:layout_marginVertical="400dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:id="@+id/forgotpass_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:elevation="6dp"
+        android:layout_marginVertical="495dp"
+        android:text="Forgot Password ?"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/line_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/line_svgrepo_com"
+        android:textColor="@color/black"
+        android:layout_marginVertical="510dp"
+        />
+<Button
+    android:id="@+id/login_btn"
+    android:layout_width="160dp"
+    android:layout_height="60dp"
+    android:text="LOG IN"
+    android:background="@drawable/shapeblk_btn"
+    android:textSize="25sp"
+    android:elevation="6dp"
+    android:layout_marginVertical="560dp"
+    android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="SIGN UP"
+        android:background="@drawable/shape_btn"
+        android:textSize="25sp"
+        android:elevation="6dp"
+        android:layout_marginVertical="560dp"
+        android:layout_marginLeft="220dp"/>
+    <TextView
+        android:id="@+id/terms_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:elevation="6dp"
+        android:layout_marginVertical="650dp"
+        android:text="Terms and Conditions"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/privacy_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:elevation="6dp"
+        android:layout_marginVertical="670dp"
+        android:text="Privacy"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>
