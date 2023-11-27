@@ -12,4 +12,6 @@
     <color name = "color_bg">#F1F1F1</color>
     <color name ="header">#008981</color>
     <color name ="subhead">#0D201F</color>
+    <color name ="input_shape_color">#BCBCBC</color>
+    <color name ="subhead2">#FFEBEB</color>
 </resources>

@@ -1,29 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg">
+    android:background="@drawable/signup_bg">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txt_Welcome"
+            android:id="@+id/txt_welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/roboto_bold"
-            android:text="@string/welcome" />
+            android:letterSpacing="0.1"
+            android:text="@string/welcome"
+            android:textColor="@color/header"
+            android:textSize="60sp"
+            android:elevation="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/roboto"
+            android:letterSpacing="0.1"
+            android:text="@string/signup"
+            android:textColor="@color/header"
+            android:textSize="30sp"
+            android:elevation="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/signup_form"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Name:"
+                    android:textColor="@color/subhead"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etx_signup_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto"
+                    android:hint="example: John Dela Cruz"
+                    android:textColor="@color/subhead"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Birthday:"
+                        android:textColor="@color/subhead"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btn_setDate"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/input_background"
+                        android:fontFamily="@font/roboto"
+
+                        android:text="Set Date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginEnd="25dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Gender:"
+                        android:textColor="@color/subhead"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/btn_grp_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/btn_male"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:minHeight="48dp"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/btn_female"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:minHeight="48dp"
+                            android:text="Female" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Email:"
+                    android:textColor="@color/subhead"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etx_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto"
+                    android:hint="example: BiBooAnima@gmail.com"
+                    android:textColor="@color/subhead"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_signup_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Username:"
+                    android:textColor="@color/subhead"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etx_signup_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto"
+                    android:hint="username"
+                    android:textColor="@color/subhead"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_signup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Password:"
+                    android:textColor="@color/subhead"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etx_signup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto"
+                    android:hint="password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/subhead"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txt_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Confirm Password:"
+                    android:textColor="@color/subhead"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etx_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/input_background"
+                    android:fontFamily="@font/roboto"
+                    android:hint="confirm password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/subhead"
+                    android:textSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button2"
+        android:elevation="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/signup"
+        android:textColor="@color/subhead2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/txt_copyrights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="© Copyright. All rights reserved."
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/subhead"
+        app:layout_constraintEnd_toEndOf="@+id/btn_signUp"
+        app:layout_constraintStart_toStartOf="@+id/btn_signUp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signUp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-
-
-</RelativeLayout>
