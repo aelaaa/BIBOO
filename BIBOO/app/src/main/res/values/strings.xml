@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">BIBOO</string>
-    <string name = "welcome">WELCOME</string>
+
+
+
+    //Kai imports
+    <string name = "welcome"><u>WELCOME</u></string>
+    <string name = "signup">SIGN UP</string>
 </resources>
