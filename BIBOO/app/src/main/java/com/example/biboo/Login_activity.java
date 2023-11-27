@@ -43,12 +43,12 @@ public class Login_activity extends AppCompatActivity {
     }
 
     private void signupaccount() {
-        Intent signup = new Intent(Login_activity.this, );
+        Intent signup = new Intent();
         startActivity(signup);
         finish();
     }
 
-    // to login btn and validation
+    // to Login btn and validation
     void loginaccount(){
         String user = username.getText().toString();
         String pass = password.getText().toString();
