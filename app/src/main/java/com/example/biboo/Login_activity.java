@@ -43,7 +43,7 @@ public class Login_activity extends AppCompatActivity {
     }
 
     private void signupaccount() {
-        Intent signup = new Intent();
+        Intent signup = new Intent(); // intent to sign up
         startActivity(signup);
         finish();
     }
@@ -54,9 +54,8 @@ public class Login_activity extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if (user.isEmpty() || pass.isEmpty()){
-            username.setError("Please Input your Credentials!");
+            Toast.makeText(this, "Please input your Username and/or Password", Toast.LENGTH_SHORT).show();
             clear();
-
         }else {
             cursor = db.rawQuery("SELECT * FROM BIBOO WHERE Username = '" + user + "'", null);
             if (cursor.getCount() == 0){
