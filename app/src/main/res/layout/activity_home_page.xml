@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:fillViewport="false">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"
+        tools:context=".MainActivity">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50121653" />
+
+
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="BIBOO"
+            android:textColor="#008981"
+            android:textSize="40dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintTop_toTopOf="parent"/>
+        =
+        <ImageView
+            android:id="@+id/imgUserIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:srcCompat="@drawable/user_icon" />
+
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="Username"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/imgUserIcon"
+            app:layout_constraintStart_toStartOf="@+id/imgUserIcon"
+            app:layout_constraintTop_toBottomOf="@+id/imgUserIcon"/>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTrivia"
+            android:layout_width="345dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="#0D201F"
+            app:cardCornerRadius="20dp"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_container_for_img"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgTriviaImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/img_weasel" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTriviaTitle"
+                    android:text="T I T L E"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@+id/cv_container_for_img"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTriviaDescription"
+                    android:fontFamily="@font/roboto"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:layout_toRightOf="@+id/cv_container_for_img"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/tvTriviaTitle"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <Button
+            android:id="@+id/btnAnimafication"
+            android:layout_width="175dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bg_animafication"
+            android:drawableTop="@drawable/icon_animafication"
+            android:elevation="10dp"
+            android:paddingTop="25dp"
+            android:text="ANIMAFICATION"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/cvTrivia"
+            app:layout_constraintLeft_toLeftOf="@id/cvTrivia"
+            android:layout_marginTop="20dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <Button
+            android:id="@+id/btnAnimadiet"
+            android:layout_width="175dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bg_animadiet"
+            android:drawableTop="@drawable/icon_anima_diet"
+            android:elevation="10dp"
+            android:paddingTop="20dp"
+            android:text="ANIMADIET"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnAnimafication"
+            app:layout_constraintLeft_toLeftOf="@id/btnAnimafication"
+            android:layout_marginTop="10dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="443dp" />
+
+        <Button
+            android:id="@+id/btnAnimadescrip"
+            android:layout_width="175dp"
+            android:layout_height="95dp"
+            android:background="@drawable/bg_animadescrip"
+            android:drawableTop="@drawable/icon_anima_descrip"
+            android:elevation="10dp"
+            android:paddingTop="20dp"
+            android:text="ANIMADESCRIP"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnAnimadiet"
+            app:layout_constraintLeft_toLeftOf="@id/btnAnimadiet"
+            android:layout_marginTop="10dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="551dp" />
+
+        <Button
+            android:id="@+id/btnAnimaliaSanctuary"
+            android:layout_width="154dp"
+            android:layout_height="146dp"
+            android:background="@drawable/bg_animalia_sanctuary"
+            android:drawableTop="@drawable/icon_animalia_sanctuary"
+            android:elevation="10dp"
+            android:paddingTop="40dp"
+            android:text="ANIMALIA\nSanctuary"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/cvTrivia"
+            app:layout_constraintRight_toRightOf="@id/cvTrivia"
+            android:layout_marginTop="20dp"
+            tools:layout_editor_absoluteX="225dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <Button
+            android:id="@+id/btnScore"
+            android:layout_width="152dp"
+            android:layout_height="147dp"
+            android:background="@drawable/bg_score"
+            android:drawableTop="@drawable/icon_score"
+            android:elevation="10dp"
+            android:paddingTop="40dp"
+            android:text="SCORE"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnAnimaliaSanctuary"
+            app:layout_constraintLeft_toLeftOf="@id/btnAnimaliaSanctuary"
+            android:layout_marginTop="10dp"
+            tools:layout_editor_absoluteX="227dp"
+            tools:layout_editor_absoluteY="490dp" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="341dp"
+            android:layout_height="85dp"
+            android:background="@drawable/bg_exit"
+            android:drawableEnd="@drawable/icon_exit"
+            android:drawablePadding="8dp"
+            android:elevation="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="140dp"
+            android:text="Exit"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnAnimadescrip"
+            app:layout_constraintLeft_toLeftOf="@id/btnAnimadescrip"
+            android:layout_marginTop="10dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="655dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnExit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
