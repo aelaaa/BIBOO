@@ -40,8 +40,10 @@ public class Login_activity extends AppCompatActivity {
         db = openOrCreateDatabase("BIBOO", Context.MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS BIBOO" + "(Username TEXT PRIMARY KEY, Password TEXT);");
         username.requestFocus();
-    }
 
+
+    }
+    //for signup
     private void signupaccount() {
         Intent signup = new Intent();
         startActivity(signup);
@@ -74,6 +76,8 @@ public class Login_activity extends AppCompatActivity {
         }
     }
 
+
+    //clearing all inputs in edittext fields
     public void clear(){
         username.setText("");
         password.setText("");
